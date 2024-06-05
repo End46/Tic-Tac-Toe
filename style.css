@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #082f49;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+h1{
+    background-color: grey;
+    color:white;
+    font-size: 3em;
+    grid-area: h1;
+}
+
+dialog{
+    background-color: #082f49;
+    border: none;
+    position: relative;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "h1 h2"
+    "button button";
+    color: white;
+    text-wrap: nowrap;
+    row-gap: 2vh;
+}
+
+input{
+    border-radius: 12px;
+    border: none;
+    height: 2vh;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid #9333ea;
+}
+
+form>div{
+    background-color: #082f49;
+    display: flex;
+    grid-area: h1;
+}
+
+form>div+div{
+    background-color: #082f49;
+    display: flex;
+    grid-area: h2;
+}
+
+button{
+    grid-area: button;
+    border-radius: 12px;
+    background-color: #d1d5db;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 2px;
+    grid-template-areas: 
+    "h1 h1 h1"
+    "div div div"
+    "div div div"
+    "div div div"
+    "button . .";
+    background-color: gray;
+    height: 70vh;
+    width: 25vw;
+    box-shadow: 0px 1px 5px black;
+}
+
+.contenedor div{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:3em;
+}
+
+.contenedor div:hover{
+    cursor: pointer;
+    background-color: #cbd5e1;
+    box-shadow: 0px 1px 5px black;
+}
+
+.contenedor div:active{
+    background-color: white;
+}
+
+#mensaje_ganador{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-wrap: nowrap;
+    color: white;
+    font-size: 3em;
+}
+
+.contenedor button{
+    height: 5vh;
+    align-self: flex-end;
+}
+
+.contenedor button{
+    height: 5vh;
+    align-self: flex-end;
+    border-radius: 0;
+}
+
+.contenedor button:hover{
+    background-color: #082f49;
+    color: white;
+}
+
+.contenedor button:active{
+    background-color: grey;
+}
+
+.ganador{
+    position:absolute;
+    top: 50vh;
+    left: 39vw;
+    bottom: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#082f49;
+    border: 3px #1d4ed8;
+    border-style: dashed;
+    box-shadow: 0px 1px 5px black;
+}
+
+#ganador button{
+    height: 3vh;
+    width: 5vw;
+}

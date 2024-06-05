@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <dialog id="nombres" open>
+        <form>
+            <div>
+                <label for="nombre_jugador_1">Nombre jugador 1:</label>
+            <input type="text" id="nombre_jugador_1" value="">
+            </div>
+            
+            <div>
+                <label for="nombre_jugador_2">Nombre jugador 2:</label>
+                <input type="text" id="nombre_jugador_2" value="">
+            </div>
+
+            
+            <button id="iniciar">Iniciar Juego</button>
+        </form>
+    </dialog> 
+
+    <dialog id="ganador">
+        <div>
+            <p id="mensaje_ganador"></p>
+        </div>
+    </dialog>
+    <div id="contenedor"></div>
+        
     <script src="script.js"></script>
 </body>
 </html>
