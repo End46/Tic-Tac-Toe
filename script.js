@@ -122,7 +122,7 @@ function play(dom){
                     controlador.getDiagonal1() == 'xxx' || controlador.getDiagonal2() == 'xxx' || controlador.getFila1() == 'xxx' || 
                     controlador.getFila2() == 'xxx' || controlador.getFila3() == 'xxx'){
                         ganador='player1';
-                        dom.nombreGanador.textContent = `El ganador es: ${player1.name}`
+                        dom.nombreGanador.textContent = `El ganador es: ${player1.name}`;
                         dom.dialogoFinal.appendChild(dom.casillas[10]);/*boton de reiniciar*/
                         dom.dialogoFinal.classList.add('ganador');
                         dom.dialogoFinal.showModal();
@@ -151,18 +151,21 @@ function play(dom){
                     alert('No puede jugar en un lugar ya tomado');
                 }
             }
-            console.log({contador:controlador.getContador()})
             if(controlador.getContador()==9){
                 dom.nombreGanador.textContent = 'Empate'
                 dom.dialogoFinal.appendChild(dom.casillas[10]);/*boton de reiniciar*/
                 dom.dialogoFinal.classList.add('ganador');
                 dom.dialogoFinal.showModal();
-            }dom.dialogoFinal.appendChild(dom.casillas[10]);/*boton de reiniciar*/
-            dom.dialogoFinal.classList.add('ganador');
-            dom.dialogoFinal.showModal();
-        
-    })
+            }
+        });
     }
+    dom.casillas[10].addEventListener('click',()=>{
+        if(ganador==''){
+            location.reload();
+        }else{
+            location.reload();
+            dom.dialogoFinal.close();
+        }
+    })
 }
-
 main();
