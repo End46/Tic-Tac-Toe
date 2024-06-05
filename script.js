@@ -151,7 +151,7 @@ function play(dom){
                     alert('No puede jugar en un lugar ya tomado');
                 }
             }
-            if(controlador.getContador()==9){
+            if(controlador.getContador()==9 && ganador==''){
                 dom.nombreGanador.textContent = 'Empate'
                 dom.dialogoFinal.appendChild(dom.casillas[10]);/*boton de reiniciar*/
                 dom.dialogoFinal.classList.add('ganador');
